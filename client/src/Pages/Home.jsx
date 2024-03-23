@@ -5,6 +5,7 @@ import Header from '../Components/Header/Header';
 import Posts from '../Components/Posts/Posts';
 
 function Home() {
+
   return (
     <div className="homeParentDiv">
       <Header/>
