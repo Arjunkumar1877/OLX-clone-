@@ -1,8 +1,8 @@
 .headerParentDiv {
-  padding: 10px;
+  padding: 5px;
   background-color: whitesmoke;
   position: fixed;
-  width: 98vw;
+  width: 95vw;
   z-index: 999;
 }
 

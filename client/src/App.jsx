@@ -8,6 +8,7 @@ import View from './Pages/ViewPost'
 import { useContext, useEffect } from 'react';
 import { AuthContext, FirebaseContext } from './store/Context';
 import Post, { PostContext } from './store/PostContext';
+import UserPost from './Components/UsersPosts/UserPost';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <Route path='/login' element={ <Login />} />
       <Route path='/create' element={ <Create />} />
       <Route path='/view' element={<View />} />
+      <Route path='/userPost' element={<UserPost />} />
      </Routes>
     </Router>
   </Post>

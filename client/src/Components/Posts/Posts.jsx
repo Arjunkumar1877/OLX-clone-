@@ -29,6 +29,8 @@ function Posts() {
    })
   }, [])
 
+  
+
   return (
     <div className="postParentDiv">
       <div className="moreView">
