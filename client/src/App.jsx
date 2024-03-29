@@ -9,6 +9,7 @@ import { useContext, useEffect } from 'react';
 import { AuthContext, FirebaseContext } from './store/Context';
 import Post, { PostContext } from './store/PostContext';
 import UserPost from './Components/UsersPosts/UserPost';
+import Header from './Components/Header/Header';
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
     <div>
   <Post>
   <Router>
+  <Header/>
+<br />
+<br />
      <Routes>
       <Route path='/' element={ <Home />} />
       <Route path='/signup' element={ <SignupPage />} />

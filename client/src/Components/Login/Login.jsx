@@ -1,8 +1,8 @@
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Logo from '../../olx-logo.png';
 import './Login.css';
-import { FirebaseContext } from '../../store/Context';
+import { AuthContext, FirebaseContext } from '../../store/Context';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -22,7 +22,14 @@ const { firebase } = useContext(FirebaseContext)
     alert(error.message)
   })
  }
+const { user } = useContext(AuthContext)
+ 
 
+ useEffect(()=>{
+  if(user){
+    navigate('/');
+  }
+},[])
 
   return (
     <div>

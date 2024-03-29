@@ -1,5 +1,4 @@
 import "./Create.css";
-import Header from "../Header/Header";
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext, FirebaseContext } from "../../store/Context";
@@ -49,7 +48,6 @@ const Create = () => {
 
   return (
     <>
-      <Header />
       <card>
         <div className="centerDiv">
           <label htmlFor="fname">Name</label>

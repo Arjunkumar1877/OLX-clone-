@@ -9,9 +9,11 @@ import { useContext } from 'react';
 import { AuthContext, FirebaseContext } from '../../store/Context';
 import { Link, useNavigate } from 'react-router-dom';
 function Header() {
-  const { user } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext)
   const navigate  =  useNavigate()
+  
+
 
   const handleLogout = ()=>{
     firebase.auth().signOut()
@@ -43,11 +45,12 @@ function Header() {
           </div>
         </div>
         <div className="language">
-          <span> ENGLISH </span>
+          <Link to={'/'}><span> HOME </span></Link>
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
           <span>{user ? <Link to={'/userPost'}>`Welcome ${user.displayName}` </Link>: <Link to={'/login'}>Login</Link>}</span>
+
           <hr />
         </div>
         {user && <span onClick={handleLogout} style={{cursor: "pointer"}}>Logout</span>}

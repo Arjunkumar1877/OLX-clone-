@@ -5,7 +5,6 @@ import './UserPost.css';
 import { AuthContext, FirebaseContext } from '../../store/Context';
 import { PostContext } from '../../store/PostContext';
 import { useNavigate } from 'react-router-dom';
-import Header from '../Header/Header';
 
 function UserPost() {
   const navigate = useNavigate();
@@ -59,7 +58,6 @@ function UserPost() {
   return (
     <div className="postParentDiv">
     <div className="moreView">
-      <Header />
       <div className="cards">
         {products.map((product, index) => (
           <div key={index}>
